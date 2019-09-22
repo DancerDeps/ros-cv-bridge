@@ -2,13 +2,63 @@
 Changelog for package cv_bridge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.12.8 (2018-04-17)
+2.1.2 (2019-05-30)
+------------------
+* Suppress Boost Python warning. (`#279 <https://github.com/ros-perception/vision_opencv/issues/279>`_)
+* silence unused return value warnings (`#276 <https://github.com/ros-perception/vision_opencv/issues/276>`_)
+* Contributors: Karsten Knese, Michael Carroll
+
+2.1.1 (2019-04-26)
+------------------
+* Replace ament commands with colcon (`#263 <https://github.com/ros-perception/vision_opencv/issues/263>`_)
+  Latest ros2 repo does not include ament_tools. Executing ament command results in error.
+* Contributors: Lalit Begani
+
+2.1.0 (2018-11-26)
+------------------
+* find boost_python on boost 1.58 (<1.65) (`#246 <https://github.com/ros-perception/vision_opencv/issues/246>`_)
+* Contributors: Mikael Arguedas
+
+2.0.5 (2018-08-17)
+------------------
+* remove redundant ament_auto_lint dependency to release package
+* fix test_encode_decode_cv2_compressed runtime error with JPEG2000
+* change python3-numpy as build and execution dependency to fix building
+  error while releasing package
+* Contributor: Ethan Gao
+
+2.0.4 (2018-08-14)
+------------------
+* Add libopencv-dev as dependency of cv_bridge
+* Replace assert_equal with assert to remove dependency to nose package
+* Contributor: Ethan Gao
+
+2.0.3 (2018-08-07)
+------------------
+* fix the build warning with colcon building
+* optimize buffer type of imgmsg_to_cv2()
+* add python3_opencv and python3_numpy as dependency
+* uncrustify 0.67 coding style alignment
+* Contributors: Mikael Arguedas, Lars Berscheid, Ethan Gao
+
+2.0.2 (2018-06-29)
+------------------
+* fix rosdep keys issue of opencv3
+
+
+2.0.1 (2018-06-28)
+------------------
+
+2.0.0 (2018-06-06)
 -------------------
-* Merge pull request `#191 <https://github.com/ros-perception/vision_opencv/issues/191>`_ from patrickelectric/kinetic
-  cv2_to_imgmsg: step must be int
-* cv2_to_imgmsg: step must be int
-  Signed-off-by: Patrick José Pereira <patrickelectric@gmail.com>
-* Contributors: Patrick José Pereira, Vincent Rabaud
+* Port cv_bridge to ros2
+* Remove the old inherent boost files
+* Replace boost code with newer C++ standard higher than C++11
+* Add a new readme
+* Adapt message definition like sensor_msg/Image etc in ROS2
+* Coding style alignment with ROS2 using cppcheck/cpplint and python flake8/pep257
+* Enable all the C++/Python unit test with gtest and unittest with ament tools
+* Contributors: Ethan Gao
 
 1.12.7 (2017-11-12)
 -------------------
